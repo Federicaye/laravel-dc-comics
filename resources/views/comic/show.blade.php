@@ -5,10 +5,10 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-6">
-            <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
+        <div class="col-4">
+            <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="w-100">
         </div>
-        <div class="col-6">
+        <div class="col-8">
             <h3>{{$comic->title}}</h3>
             <h5>{{$comic->series}}</h5>
             <p>{{$comic->description}}</p>

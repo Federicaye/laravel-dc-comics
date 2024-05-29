@@ -18,8 +18,14 @@
     <li class="list-group-item">{{ $comic->price}}$</li>
   </ul>
   <div class="card-body">
-  <a href="#" class="btn btn-primary">Edit</a>
-  <a href="#" class="btn btn-primary">Cancel</a>
+
+  <a href="{{route('comic.edit', $comic->id)}}" class="btn btn-primary">Edit</a>
+
+  <form action="{{route('comic.destroy', $comic->id)}}" method="POST">
+  @csrf
+  @method('DELETE')
+ <input type="submit" value="delete" id="delete-button">
+  </form>
   </div>
 </div>
 
