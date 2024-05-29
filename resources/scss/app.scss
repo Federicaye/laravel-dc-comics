@@ -12,11 +12,22 @@ $fa-font-path: "../webfonts" !default;
 h1 {
     color: $text-color;
 }
-.o {
-   width: 50px;
+
+ .comic {
+    width: calc(100% / 5 - 15px)
+   
  }
- .y {
-    width: 30px;
-    height: 30px;
-    background-color: black;
+
+ .comic-img {
+    height: 350px;
+ }
+
+ .container-comic {
+    gap: 15px;
+ }
+
+ .description {
+    height: 300px;
+    overflow-y: scroll;
+
  }
