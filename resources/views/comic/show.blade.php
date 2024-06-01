@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 @section('title', 'comics')
 
@@ -14,6 +13,14 @@
             <p>{{$comic->description}}</p>
             <p>{{$comic->price}}$</p>
             <p>{{$comic->type}}</p>
+            
+            <a href="{{route('comic.edit', $comic->id)}}" class="btn btn-primary">Edit</a>
+
+            <form action="{{route('comic.destroy', $comic->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="delete" id="delete-button" class="btn btn-danger">
+            </form>
         </div>
 
     </div>

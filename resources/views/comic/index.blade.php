@@ -10,7 +10,7 @@
 <a href="{{route('comic.show', $comic->id)}}"><img src="{{$comic->thumb}}" class="card-img-top comic-img" alt="$comic->title"> </a>
   <div class="card-body">
     <h5 class="card-title">{{$comic->title}}</h5>
-    <div class="description"><p class="card-text">{{$comic->description}}</p></div>
+    <div class="description"><p class="card-text">{{Str::limit($comic->description, 300)}}</p></div>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">{{ $comic->series}}</li>
@@ -24,7 +24,7 @@
   <form action="{{route('comic.destroy', $comic->id)}}" method="POST">
   @csrf
   @method('DELETE')
- <input type="submit" value="delete" id="delete-button">
+ <input type="submit" value="delete" id="delete-button" class="btn btn-danger">
   </form>
   </div>
 </div>
