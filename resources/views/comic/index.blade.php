@@ -12,6 +12,9 @@
     <input type="submit" value="search">
   </form>
 </div>
+<div class="w-25 m-auto">
+<a href="{{route('comic.create')}}" class="w-100 m-4 btn-primary btn">create new item</a>
+</div>
 <div class="d-flex flex-wrap container container-comic">
   @foreach ($comics as $comic)
 
